@@ -71,7 +71,7 @@ def all_supplies_in_holidays(holiday_hash)
     puts key.to_s.capitalize! + ":"
     value.each do |key2, value2|
       string = value2.join(", ")
-      fixedkey = key2.to_s.capitalize
+      fixedkey = key2.to_s
       titleizearray = fixedkey.split("_")
       i= 0
       for i in 1..titleizearray.length do
