@@ -67,15 +67,12 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  array = []
   holiday_hash.each do |key, value|
-    puts key.to_s
+    puts key.to_s.capitalize! + ":"
     value.each do |key2, value2|
-      array += value2
+      puts key2.to_s.capitalize! 
     end
   end
-  array.flatten
-  return array
 end
 
 def all_holidays_with_bbq(holiday_hash)
