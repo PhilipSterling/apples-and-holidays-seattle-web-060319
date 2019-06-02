@@ -73,7 +73,12 @@ def all_supplies_in_holidays(holiday_hash)
       string = value2.join(", ")
       fixedkey = key2.to_s.capitalize
       fixedkey.sub!("_", " ")
-      puts "  " + fixedkey + ": " + string
+      titleizearray = fixedkey.split(" ")
+      titleizearray.map! do |x| 
+        x.capitalize!
+      end
+      finalkey = titleizearray.join(" ")
+      puts "  " + finalkey + ": " + string
     end
   end
 end
