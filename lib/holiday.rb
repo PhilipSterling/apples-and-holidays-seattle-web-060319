@@ -75,7 +75,9 @@ def all_supplies_in_holidays(holiday_hash)
       titleizearray = fixedkey.split("_")
       i= 0
       for i in 1..titleizearray.length do
+        if (titleizearray != nil)
         titleizearray[i].capitalize!
+        end
       end
       finalkey = titleizearray.join(" ")
       puts "  " + finalkey + ": " + string
